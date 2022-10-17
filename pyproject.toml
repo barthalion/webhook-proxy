@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "webhook-proxy"
+version = "0.1.0"
+description = "A webhook proxy for buildbot"
+authors = ["Bartłomiej Piotrowski <b@bpiotrowski.pl>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "webhook_proxy"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.85.1"
+psycopg2-binary = "^2.9.4"
+uvicorn = "^0.18.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+mypy = "^0.982"
+isort = "^5.10.1"
+types-psycopg2 = "^2.9.21.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
